@@ -7,9 +7,8 @@
 </head>
 <body>
   <h1 style="text-align:center;"> Hello 
-  @foreach(Session::get('data') as $test)
-    {{$test['name']}}
-  @endforeach
+  {{Session::get('data')['name']}}
+
 </h1>  
   <a href="/logout">Logout</a>
 </body>

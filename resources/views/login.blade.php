@@ -24,7 +24,7 @@
       @enderror
         <button type="submit" class="btn btn-primary btn-block btn-large" name="submit" value="submit">submit</button>
     </form>
-    <a href="/register">Register Here</a>
+    <a href="/register" class="btn btn-success" style="margin-top: 12px;">Register Here</a>
 </div>
 </body>
 </html>

@@ -47,7 +47,7 @@ class RegisterController extends Controller
            if(Auth::attempt($req->only(["email", "password"])))
            {
             
-            Session()->put('data',User::get('name'));
+            Session()->put('data',Auth::user());
             return redirect('/dashboard');
            }
            else{
@@ -58,8 +58,7 @@ class RegisterController extends Controller
     }
     public function home()
     {
-        $datas = register::all();
-        return view('dashboard',compact('datas'));
+        return view('dashboard');
     }
 
     public function logout(){
