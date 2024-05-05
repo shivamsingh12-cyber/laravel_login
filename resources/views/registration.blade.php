@@ -13,9 +13,13 @@
     <form action="" method="post">
         @csrf
       <input type="text" name="name" placeholder="Name" value="{{old('name')}}" />
-      @error('name')
-      <small class="text-danger" style="color:red;">{{ $message }}</small>
-      @enderror
+
+      <span class="fas fa-envelope text-danger" style="color:red;">
+          @error('name')
+            {{$message}}
+          @enderror
+        </span>
+      
 
       <input type="text" name="email" placeholder="Email"  value="{{old('email')}}"/>
       <span class="fas fa-envelope text-danger" style="color:red;">
